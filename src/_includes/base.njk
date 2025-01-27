@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/css/style.css?v=7">
+        <link rel="icon" href="/assets/img/profile.ico">
+		<title>{{ title }}</title>
+        <meta name="description" content="{{ description }}">
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1654MX7N3"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-Y1654MX7N3');
+		</script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link 
+            rel="preload" 
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+            as="style" 
+            onload="this.onload=null;this.rel='stylesheet'"/>
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+                rel="stylesheet"
+                type="text/css"/>
+        </noscript>
+        <!-- Hotjar Tracking Code for Portfolio -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:3416579,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+    <body>
+
+        {{ content | safe }}
+
+        <div class="cookie-consent">
+            <p class="cookie-consent-text">By using our site you agree to our use of cookies to deliver a better site experience.</p>
+            <p class="cookie-consent-button">Got it</p>
+        </div>
+
+        <script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                if (!localStorage.getItem("cookieConsent")) {
+                    $(".cookie-consent").css("display", "block");
+                }
+                $(".cookie-consent-button").on("click", function cookieConsent() {
+                    localStorage.setItem("cookieConsent", true);
+                    $(".cookie-consent").css("display", "none");
+                })
+            });
+        </script>
+
+        <!-- Calendly badge widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/csaba-csaba', text: 'Schedule time with me', color: '#d7ebbd', textColor: '#000000', branding: true }); }</script>
+        <!-- Calendly badge widget end -->
+    </body>
+</html>
